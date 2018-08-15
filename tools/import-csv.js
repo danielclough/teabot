@@ -1,8 +1,23 @@
-var csv = require('csv');
-var fs = require('fs');
+'use strict';
 
-var parser =csv.parse({columns: true}, function(err, data){
-  console.log(data);
-});
+const fs = require('fs');
+const csv = require('csv');
 
-fs.createReadStream(__dirname+'/tea.csv').pipe(parser);
+const TeaBot = require('../lib/teabot');
+
+async function doImport (file) {
+  if (!fs.existsSync(file)) return console.error(`File does not exist: ${file}`);
+
+  let parser = csv.parse({
+    columns: true
+  }, function (err, data) {
+    if (err) console.error(err);
+    console.log(data);
+  });
+
+  fs.createReadStream(file).pipe(parser);
+}
+
+// TODO: allow use of command line parameters to specify file
+// i.e., process.argv
+doImport('./tools/tea.csv');
