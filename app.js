@@ -1,13 +1,10 @@
 'use strict';
 
-var Maki = require('maki');
-var app = new Maki({
-  service: {
-    name: 'teabot'
-  }
-});
+const TeaBot = require('./lib/teabot');
 
-app.define('Tea', require('./resources/tea'));
-app.define('People', require('./resources/people'));
+async function main () {
+  let bot = new TeaBot();
+  await bot.start();
+}
 
-module.exports = app.start();
+main();
