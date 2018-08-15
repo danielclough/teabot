@@ -3,28 +3,34 @@
 const fs = require('fs');
 const csv = require('csv');
 
-const TeaBot = require('../lib/teabot');
+const Remote = require('maki-remote');
 
 async function doImport (file) {
   if (!fs.existsSync(file)) return console.error(`File does not exist: ${file}`);
 
-  let bot = new TeaBot();
+  let remote = new Remote('http://localhost:9200/teas');
   let parser = csv.parse({
     columns: true
   }, function (err, teas) {
-    if (err) console.error(err);
+    if (err) return console.error(err);
 
     // TODO: use Fabric's logs rather than console
     console.log(`CSV parsed, has ${teas.length} entries.  Beginning import...`);
 
+    // TODO: use Promise.all or something similar
     for (let i = 0; i < teas.length; i++) {
-      let result = bot.app.resources.Tea.create(teas[i], function (err, obj) {
-        console.log(`Callback: ${err} ${obj}`);
+      // Assign data fields...
+      let data = Object.assign({
+        name: teas[i].Class,
+        price: teas[i].Oz_Price
       });
-      console.log(`Import: ${result}`, teas[i]);
-    }
 
-    console.log(`CSV import finished!`);
+      // Create the Tea instance...
+      remote.create(data, function (err, tea) {
+        if (err) return console.error(`Error creating: ${err}`);
+        console.log(`Tea created:`, tea);
+      });
+    }
   });
 
   fs.createReadStream(file).pipe(parser);

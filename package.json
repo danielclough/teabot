@@ -5,9 +5,11 @@
   "main": "app.js",
   "dependencies": {
     "csv": "^0.4.6",
-    "maki": "github:FabricLabs/maki"
+    "maki": "FabricLabs/maki"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "maki-remote": "0.0.3"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "mocha"
@@ -25,6 +27,9 @@
   ],
   "author": "Daniel Clough",
   "license": "GPL-3.0",
+  "contributors": [
+    "Eric Martindale <eric@ericmartindale.com>"
+  ],
   "bugs": {
     "url": "https://github.com/danielclough/teabot/issues"
   },
