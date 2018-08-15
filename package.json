@@ -1,0 +1,31 @@
+{
+  "name": "teabot",
+  "version": "0.0.0",
+  "description": "please edit me",
+  "main": "app.js",
+  "dependencies": {
+    "csv": "^0.4.6",
+    "maki": "github:FabricLabs/maki"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielclough/teabot.git"
+  },
+  "keywords": [
+    "bot",
+    "maki",
+    "tea",
+    "teabot",
+    "chat"
+  ],
+  "author": "Daniel Clough",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/danielclough/teabot/issues"
+  },
+  "homepage": "https://github.com/danielclough/teabot#readme"
+}

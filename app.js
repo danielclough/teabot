@@ -8,7 +8,6 @@ var app = new Maki({
 });
 
 app.define('Tea', require('./resources/tea'));
-
 app.define('People', require('./resources/people'));
 
 module.exports = app.start();
