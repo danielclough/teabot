@@ -1,0 +1,36 @@
+{
+  "name": "teabot",
+  "version": "0.1.0-dev",
+  "description": "bot to buy and sell tea",
+  "main": "app.js",
+  "dependencies": {
+    "@fabric/core": "github:FabricLabs/fabric#fabric-core-refactor",
+    "csv": "^0.4.5",
+    "doorman": "FabricLabs/doorman",
+    "maki": "FabricLabs/maki#0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martindale/teabot.git"
+  },
+  "keywords": [
+    "tea",
+    "bot",
+    "teabot",
+    "maki",
+    "fabric",
+    "grove",
+    "chat",
+    "chatbot"
+  ],
+  "author": "TeaDaniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martindale/teabot/issues"
+  },
+  "homepage": "https://github.com/martindale/teabot#readme"
+}
