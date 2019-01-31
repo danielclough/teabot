@@ -1,7 +1,7 @@
+'use strict';
+
 module.exports = {
-  attributes:   {
-    company:         { type: String, max: 70 },
-    name:            { type: String, max: 70 }
+  attributes: {
+    name: { type: String, max: 70 }
   }
 };
-

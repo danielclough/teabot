@@ -1,14 +1,19 @@
 'use strict';
 
-var Maki = require('maki');
-var app = new Maki({
-  service: {
-    name: 'teabot'
-  }
-});
+const config = require('./config');
 
-app.define('Tea', require('./resources/tea'));
+const Doorman = require('doorman');
+const Fabric = require('@fabric/core');
 
-app.define('People', require('./resources/people'));
+async function main () {
+  let doorman = new Doorman(config);
+  let fabric = new Fabric(config);
 
-module.exports = app.start();
+  await fabric.start();
+  await doorman.start();
+
+  console.log('doorman:', doorman);
+  console.log('fabric:', fabric);
+}
+
+main();
