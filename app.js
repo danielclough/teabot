@@ -1,5 +1,6 @@
 'use strict';
 
+
 const config = require('./config');
 
 const Doorman = require('doorman');
@@ -15,5 +16,6 @@ async function main () {
   console.log('doorman:', doorman);
   console.log('fabric:', fabric);
 }
+
 
 main();

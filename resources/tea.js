@@ -3,6 +3,7 @@
 module.exports = {
   attributes:   {
     tea:             { type: String, max: 70 },
+
     country:         { type: String, max: 70 },
     province:        { type: String, max: 70 },
     city:            { type: String, max: 70 },

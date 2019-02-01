@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
+
     "test": "mocha"
   },
   "repository": {
@@ -33,4 +34,5 @@
     "url": "https://github.com/martindale/teabot/issues"
   },
   "homepage": "https://github.com/martindale/teabot#readme"
+
 }
