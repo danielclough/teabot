@@ -1,10 +1,21 @@
 'use strict';
 
-const TeaBot = require('./lib/teabot');
+
+const config = require('./config');
+
+const Doorman = require('doorman');
+const Fabric = require('@fabric/core');
 
 async function main () {
-  let bot = new TeaBot();
-  await bot.start();
+  let doorman = new Doorman(config);
+  let fabric = new Fabric(config);
+
+  await fabric.start();
+  await doorman.start();
+
+  console.log('doorman:', doorman);
+  console.log('fabric:', fabric);
 }
+
 
 main();

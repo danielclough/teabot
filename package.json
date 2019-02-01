@@ -1,37 +1,38 @@
 {
   "name": "teabot",
-  "version": "0.0.0",
-  "description": "please edit me",
+  "version": "0.1.0-dev",
+  "description": "bot to buy and sell tea",
   "main": "app.js",
   "dependencies": {
-    "csv": "^0.4.6",
-    "maki": "FabricLabs/maki"
+    "@fabric/core": "github:FabricLabs/fabric#fabric-core-refactor",
+    "csv": "^0.4.5",
+    "doorman": "FabricLabs/doorman",
+    "maki": "FabricLabs/maki#0.3"
   },
-  "devDependencies": {
-    "maki-remote": "0.0.3"
-  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
+
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielclough/teabot.git"
+    "url": "git+https://github.com/martindale/teabot.git"
   },
   "keywords": [
-    "bot",
-    "maki",
     "tea",
+    "bot",
     "teabot",
-    "chat"
+    "maki",
+    "fabric",
+    "grove",
+    "chat",
+    "chatbot"
   ],
-  "author": "Daniel Clough",
-  "license": "GPL-3.0",
-  "contributors": [
-    "Eric Martindale <eric@ericmartindale.com>"
-  ],
+  "author": "TeaDaniel",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielclough/teabot/issues"
+    "url": "https://github.com/martindale/teabot/issues"
   },
-  "homepage": "https://github.com/danielclough/teabot#readme"
+  "homepage": "https://github.com/martindale/teabot#readme"
+
 }
